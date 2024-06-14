@@ -18,7 +18,7 @@ This command starts json-server on port 5000 and serves data from db.json.
 -Navigate to the API keys section under your account settings.\
 -Generate a new API key.\
 2.) Create the .env file:\
-  In the root directory of the project, create a file named .env.
+  In the root directory of the project, create a file named .env.\
 3.) Add your API key to .env:\
    Open the .env file and add your API key in the following format:\
    REACT_APP_OPENWEATHERMAP_API_KEY=your_api_key_here\
