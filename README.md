@@ -1,70 +1,46 @@
-# Getting Started with Create React App
+# Weather Dashboard Application
+This application displays current weather and a 5-day forecast for a city. Users can manage favorite cities and toggle between Celsius and Fahrenheit units.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Set up API data with json-server:
 
-## Available Scripts
+Ensure you have json-server installed globally. If not, install it using:
+npm install -g json-server
+Create a file named db.json in the root directory of the project. This file will simulate your API data.
 
-In the project directory, you can run:
+### Start json-server to serve API data:
+Run the following command to start json-server:
+json-server --watch db.json --port 5000
+This command starts json-server on port 5000 and serves data from db.json.
 
-### `npm start`
+### Setting Up API Key
+1.) Obtain an API key from OpenWeatherMap:
+-Go to OpenWeatherMap and sign up.
+-Navigate to the API keys section under your account settings.
+-Generate a new API key.
+2.) Create the .env file:
+  In the root directory of the project, create a file named .env.
+3.) Add your API key to .env:
+   Open the .env file and add your API key in the following format:
+   REACT_APP_OPENWEATHERMAP_API_KEY=your_api_key_here
+   Replace your_api_key_here with the API key you obtained from OpenWeatherMap.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Running the Application
+Start the application: npm start
+This command starts the development server and opens the application in your default web browser.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Usage
+1.)Enter a city name to view weather information.
+2.)Click "Toggle Celsius/Fahrenheit" to switch temperature units.
+3.)Manage favorite cities by adding or removing them.
 
-### `npm test`
+### Technologies Used
+1.)React
+2.)Axios for API requests
+3.)FontAwesome for icons
+4.)json-server for simulating API data
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Credits
+Weather data provided by OpenWeatherMap# Getting Started with Create React App
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
