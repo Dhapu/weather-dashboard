@@ -1,38 +1,232 @@
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #a8d2e2;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
+  padding: 20px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  color: #333;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/* Search Component */
+.Search {
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 5px;
+}
+
+.Search input {
+  padding: 10px;
+  font-size: 16px;
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  width: 300px;
+  margin-right: 10px;
+  transition: border-color 0.3s;
+}
+
+.Search input:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+.Search button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0d0d0d;
   color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
 }
 
-.App-link {
-  color: #61dafb;
+.Search button:hover {
+  background-color: #3f4040;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* Toggle Button */
+.ToggleButton {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #0b0b0b;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.ToggleButton:hover {
+  background-color: #5a6268;
+}
+
+.WeatherDisplay {
+  margin: 10px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.current-weather {
+  margin-bottom: 0px;
+  text-align: center; /* Center text */
+}
+
+.weather-details {
+  display: flex;
+  justify-content: center; /* Center children horizontally */
+  align-items: center; /* Center children vertically */
+}
+.temperature {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-right: 20px;
+}
+
+.condition {
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.add-favorite {
+  padding: 10px 20px;
+  font-size: 1rem;
+  background-color: #2d8a47;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.add-favorite:hover {
+  background-color: #3e994f;
+}
+
+.forecast {
+  margin-top: 20px;
+}
+
+.forecast-scroll {
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+}
+
+.forecast-items {
+  display: flex;
+  gap: 20px;
+  padding: 10px 0;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.forecast-items::-webkit-scrollbar {
+  display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+}
+
+.forecast-item {
+  flex: 0 0 auto;
+  min-width: 200px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+}
+
+.date {
+  font-weight: bold;
+}
+
+.temp {
+  font-size: 1.2rem;
+  margin: 5px 0;
+}
+
+.description {
+  color: #555;
+}
+
+.arrow {
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.arrow:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Favorites Component */
+.Favorites {
+  margin: 10px auto;
+  padding: 20px;
+  background-color: white;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  width: 80%;
+  max-width: 600px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.Favorites h3 {
+  color: #333;
+}
+
+.Favorites ul {
+  list-style: none;
+  padding: 0;
+}
+
+.Favorites li {
+  display: flex;
+  align-items: center; /* Center items vertically */
+  justify-content: space-between;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+  transition: background-color 0.3s;
+}
+
+.Favorites li:hover {
+  background-color: #f8f9fa;
+}
+
+.weather-button,
+.remove-button {
+  padding: 8px 12px; /* Adjust padding for buttons */
+  font-size: 14px;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.weather-button {
+  background-color: #508d50; /* Blue color for "Show Weather" button */
+}
+
+.weather-button:hover {
+  background-color: #c7e9c7; /* Darker blue on hover */
+}
+
+.remove-button {
+  background-color: #dc3545; /* Red color for "Remove" button */
+}
+
+.remove-button:hover {
+  background-color: #c82333; /* Darker red on hover */
 }
