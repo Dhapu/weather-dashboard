@@ -24,6 +24,8 @@ const WeatherDisplay = ({ weatherData, forecastData, unit, addFavorite }) => {
 
   const addToFavorites = () => {
     addFavorite(weatherData.name);
+    console.log('Added to favorites:', weatherData);
+    console.log('Favorites:', forecastData);
   };
 
   return (
